@@ -49,7 +49,7 @@ public class TerminalAsessment {
 	}
 
 	public static void view_employee_details() {
-		String file = "src\\employeedetails.csv";
+		String file = "src\\details.csv";
 		BufferedReader reader = null;
 		String line = "";
 
@@ -209,7 +209,7 @@ public class TerminalAsessment {
 				System.out.println();
 			}
 
-			String filepath = "src\\employeedetails.csv";
+			String filepath = "src\\details.csv";
 			BufferedReader reader2 = new BufferedReader(new FileReader(filepath));
 			double total_worked_hours = total_hours;
 			
