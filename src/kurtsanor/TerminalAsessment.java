@@ -49,7 +49,7 @@ public class TerminalAsessment {
 	}
 
 	public static void view_employee_details() {
-		String file = "C:\\Users\\keith\\Downloads\\employeedetails.csv";
+		String file = "src\\employeedetails.csv";
 		BufferedReader reader = null;
 		String line = "";
 
@@ -104,7 +104,7 @@ public class TerminalAsessment {
 
 	public static void attendance() {
 
-		String file = "C:\\Users\\keith\\Downloads\\attendance.csv";
+		String file = "src\\attendance.csv";
 		BufferedReader reader = null;
 		String line = "";
 		try {
@@ -148,7 +148,7 @@ public class TerminalAsessment {
 	}
 
 	public static void calculate_net_and_gross_salary() {
-		String file = "C:\\Users\\keith\\Downloads\\attendance.csv";
+		String file = "src\\attendance.csv";
 
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -162,8 +162,8 @@ public class TerminalAsessment {
 			String Month = read.readLine();
 
 			boolean found = false;
-			double totalHours = 0;
-
+			double total_hours = 0;
+			
 			String line = "";
 			// reads the csv
 			while ((line = reader.readLine()) != null) {
@@ -194,8 +194,8 @@ public class TerminalAsessment {
 					System.out.println();
 					System.out.println("=============================================");
 
-					totalHours = totalHours + hoursworked;
-
+					total_hours = total_hours + hoursworked;
+					
 
 				}
 			}
@@ -205,13 +205,14 @@ public class TerminalAsessment {
 				return;
 			}
 			else {
-				System.out.printf("Total hours worked in the month: %.0f hours", totalHours);
+				System.out.printf("Total hours worked in the month: %.0f hours", total_hours);
 				System.out.println();
 			}
 
-			String filepath = "C:\\Users\\keith\\Downloads\\employeedetails.csv";
+			String filepath = "src\\employeedetails.csv";
 			BufferedReader reader2 = new BufferedReader(new FileReader(filepath));
-			double total_worked_hours = totalHours;
+			double total_worked_hours = total_hours;
+			
 			boolean employee_found = false;
 			// reads csv
 			while ((line = reader2.readLine()) != null) {
@@ -230,7 +231,8 @@ public class TerminalAsessment {
 					System.out.printf("Gross Weekly Pay: ₱%.2f", weekly_pay);
 					System.out.println();
 					System.out.println();
-
+				
+					
 					// calculates net pay with deductions
 					double salary = monthly_pay;
 					System.out.println("====== Calculating Net Salary ======");
@@ -515,8 +517,8 @@ public class TerminalAsessment {
 					// weekly salary with
 					// deductions.
 					System.out.println();
-					System.out.println();
-
+				
+					
 				}
 
 			}
